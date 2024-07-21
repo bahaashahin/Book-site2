@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الكتب</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .quantity-cell {
+            text-align: center;
+            font-size: 0.8rem; /* أصغر حجم للخط */
+        }
+        .price-table td {
+            text-align: right;
+        }
+        .table-sm td {
+            padding: 0.3rem;
+        }
+        .form-group label {
+            font-size: 1rem;
+        }
+        .btn {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Book Site</h1>
+        <div class="form-group">
+            <label for="bookType">نوع الكتاب:</label>
+            <select id="bookType" class="form-control">
+                <option value="almoaser">المعاصر</option>
+                <option value="arts">أدبي</option>
+                <option value="technology">تكنولوجيا</option>
+                <option value="literature">أدب</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="subject">المادة الدراسية:</label>
+            <select id="subject" class="form-control">
+                <option value="math">رياضيات</option>
+                <option value="physics">فيزياء</option>
+                <option value="chemistry">كيمياء</option>
+                <option value="history">تاريخ</option>
+                <option value="geography">جغرافيا</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="grade">السنة الدراسية:</label>
+            <select id="grade" class="form-control">
+                <option value="1">الأولى</option>
+                <option value="2">الثانية</option>
+                <option value="3">الثالثة</option>
+                <option value="4">الرابعة</option>
+            </select>
+        </div>
+        <button id="addBook" class="btn btn-primary">إضافة كتاب</button>
+        <button id="calculateTotal" class="btn btn-success mt-2">حساب الإجمالي</button>
+
+        <h2 class="mt-4">الكتب المختارة</h2>
+        <table id="selectedBooks" class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>نوع الكتاب</th>
+                    <th>المادة الدراسية</th>
+                    <th>السنة الدراسية</th>
+                    <th>السعر قبل الخصم</th>
+                    <th>السعر بعد الخصم</th>
+                    <th>الكمية</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2 class="mt-4"> Total</h2>
+        <table class="table table-bordered table-sm price-table">
+            <tr>
+                <td>Tolal:</td>
+                <td id="totalPrice"> L.E</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
